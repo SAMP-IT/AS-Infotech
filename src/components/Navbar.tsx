@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -40,7 +39,9 @@ const Navbar: React.FC = () => {
     >
       <div className="container mx-auto flex justify-between items-center px-4">
         <div className="flex items-center">
-          <a href="#" className="text-2xl font-bold text-white">LevelUp</a>
+          <a href="#" className="text-2xl font-bold text-white">
+            AS Infotech
+          </a>
         </div>
 
         {/* Desktop Nav */}
@@ -54,7 +55,10 @@ const Navbar: React.FC = () => {
               {item.name}
             </a>
           ))}
-          <Button className="bg-consultancy-blue hover:bg-consultancy-blue/80 text-white rounded-full px-6">
+          <Button
+            className="bg-consultancy-blue hover:bg-consultancy-blue/80 text-white rounded-full px-6"
+            onClick={() => window.open("https://wa.me/+919566412970", "_blank")}
+          >
             Book a Call
           </Button>
         </div>
@@ -88,7 +92,12 @@ const Navbar: React.FC = () => {
                 {item.name}
               </a>
             ))}
-            <Button className="bg-consultancy-blue hover:bg-consultancy-blue/80 text-white rounded-full w-full">
+            <Button
+              className="bg-consultancy-blue hover:bg-consultancy-blue/80 text-white rounded-full w-full"
+              onClick={() =>
+                window.open("https://wa.me/+919566412970", "_blank")
+              }
+            >
               Book a Call
             </Button>
           </div>

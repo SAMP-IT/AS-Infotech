@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,7 +15,9 @@ const ContactSection: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -24,23 +25,14 @@ const ContactSection: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
-      });
-      
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        message: "",
-      });
-      
-      setIsSubmitting(false);
-    }, 1500);
+
+    // Construct WhatsApp message
+    const waMessage = `Name: ${formData.name} Email: ${formData.email} Company: ${formData.company} Message: ${formData.message}`;
+    const waUrl = `https://wa.me/+919566412970?text=${encodeURIComponent(
+      waMessage
+    )}`;
+    window.open(waUrl, "_blank");
+    setIsSubmitting(false);
   };
 
   return (
@@ -49,15 +41,19 @@ const ContactSection: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Let's Talk</h2>
           <p className="text-consultancy-lightgray max-w-2xl mx-auto">
-            Ready to transform your business? Get in touch for a free consultation and let's discuss how we can help you achieve your goals.
+            Ready to transform your business? Get in touch for a free
+            consultation and let's discuss how we can help you achieve your
+            goals.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           <div>
             <div className="glass-card p-8 h-full border-0">
-              <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-              
+              <h3 className="text-2xl font-semibold mb-6">
+                Contact Information
+              </h3>
+
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="h-10 w-10 rounded-full bg-consultancy-blue/20 flex items-center justify-center flex-shrink-0">
@@ -65,34 +61,45 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-medium">Email Us</p>
-                    <p className="text-consultancy-lightgray">hello@levelupconsulting.com</p>
+                    <p className="text-consultancy-lightgray">
+                      asinfotech@gmail.com
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="h-10 w-10 rounded-full bg-consultancy-blue/20 flex items-center justify-center flex-shrink-0">
                     <Phone className="h-5 w-5 text-consultancy-blue" />
                   </div>
                   <div>
                     <p className="font-medium">Call Us</p>
-                    <p className="text-consultancy-lightgray">(555) 123-4567</p>
+                    <p className="text-consultancy-lightgray">
+                      (+91) 9566412970
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="h-10 w-10 rounded-full bg-consultancy-blue/20 flex items-center justify-center flex-shrink-0">
                     <MessageSquare className="h-5 w-5 text-consultancy-blue" />
                   </div>
                   <div>
                     <p className="font-medium">Office Hours</p>
-                    <p className="text-consultancy-lightgray">Monday-Friday: 9AM-6PM EST</p>
+                    <p className="text-consultancy-lightgray">
+                      Monday-Saturday: 9AM-6PM IST
+                    </p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-8 pt-6 border-t border-white/10">
                 <p className="mb-4">Book a call directly:</p>
-                <Button className="bg-consultancy-blue hover:bg-consultancy-blue/80 text-white w-full">
+                <Button
+                  className="bg-consultancy-blue hover:bg-consultancy-blue/80 text-white w-full"
+                  onClick={() =>
+                    window.open("https://wa.me/+919566412970", "_blank")
+                  }
+                >
                   Schedule Consultation
                 </Button>
               </div>
@@ -101,7 +108,7 @@ const ContactSection: React.FC = () => {
 
           <div className="glass-card p-8 border-0">
             <h3 className="text-2xl font-semibold mb-6">Send Us a Message</h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block mb-2 text-sm">
@@ -117,7 +124,7 @@ const ContactSection: React.FC = () => {
                   placeholder="John Doe"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="email" className="block mb-2 text-sm">
                   Email Address
@@ -133,7 +140,7 @@ const ContactSection: React.FC = () => {
                   placeholder="john@example.com"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="company" className="block mb-2 text-sm">
                   Company Name
@@ -147,7 +154,7 @@ const ContactSection: React.FC = () => {
                   placeholder="ACME Inc."
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block mb-2 text-sm">
                   Your Message
@@ -163,9 +170,9 @@ const ContactSection: React.FC = () => {
                   placeholder="Tell us about your project or business challenge..."
                 />
               </div>
-              
-              <Button 
-                type="submit" 
+
+              <Button
+                type="submit"
                 disabled={isSubmitting}
                 className="w-full bg-consultancy-blue hover:bg-consultancy-blue/80 text-white"
               >

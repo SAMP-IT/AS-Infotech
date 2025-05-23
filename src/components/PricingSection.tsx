@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,31 +5,31 @@ import { Button } from "@/components/ui/button";
 const PricingSection: React.FC = () => {
   const plans = [
     {
-      name: "Starter",
-      price: "$1,499",
+      name: "Marketing",
+      price: "₹1,000",
       description: "Perfect for small businesses just getting started",
       features: [
-        "Business Assessment",
+        "Video Editing",
         "90-Day Growth Strategy",
         "2 Strategy Sessions",
-        "Email Support",
-        "Monthly Progress Report"
+        "Video Scripting",
+        "Monthly Progress Report",
       ],
-      isPopular: false
+      isPopular: false,
     },
     {
-      name: "Growth",
-      price: "$2,999",
+      name: "Development",
+      price: "₹10,000",
       description: "For established businesses ready to scale",
       features: [
-        "Comprehensive Business Analysis",
+        "Website Development",
         "6-Month Growth Roadmap",
-        "Bi-weekly Strategy Sessions",
+        "Custom Software Development",
         "Priority Email & Phone Support",
-        "Competitor Analysis",
-        "Custom KPI Dashboard"
+        "Custom Mobile App Development",
+        "Custom KPI Dashboard",
       ],
-      isPopular: true
+      isPopular: true,
     },
     {
       name: "Enterprise",
@@ -43,28 +42,33 @@ const PricingSection: React.FC = () => {
         "24/7 Priority Support",
         "Market Expansion Strategy",
         "Dedicated Consultant",
-        "Quarterly Executive Reports"
+        "Quarterly Executive Reports",
       ],
-      isPopular: false
-    }
+      isPopular: false,
+    },
   ];
 
   return (
     <section id="pricing" className="section-padding bg-consultancy-charcoal">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Investment Plans</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Investment Plans
+          </h2>
           <p className="text-consultancy-lightgray max-w-2xl mx-auto">
-            Flexible consulting packages designed to accommodate businesses at every stage of growth.
+            Flexible consulting packages designed to accommodate businesses at
+            every stage of growth.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className={`glass-card border-0 relative ${
-                plan.isPopular ? "border-consultancy-blue/50 shadow-lg shadow-consultancy-blue/20" : ""
+                plan.isPopular
+                  ? "border-consultancy-blue/50 shadow-lg shadow-consultancy-blue/20"
+                  : ""
               }`}
             >
               {plan.isPopular && (
@@ -76,10 +80,21 @@ const PricingSection: React.FC = () => {
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                 <div className="mb-4">
                   <span className="text-4xl font-bold">{plan.price}</span>
-                  {plan.price !== "Custom" && <span className="text-consultancy-lightgray">/month</span>}
+                  {plan.name === "Marketing" && (
+                    <span className="text-consultancy-lightgray text-base block">
+                      Starts from ₹1000/- per Video
+                    </span>
+                  )}
+                  {plan.name === "Development" && (
+                    <span className="text-consultancy-lightgray text-base block">
+                      Starts from ₹10,000/- per Project
+                    </span>
+                  )}
                 </div>
-                <p className="text-consultancy-lightgray mb-6">{plan.description}</p>
-                
+                <p className="text-consultancy-lightgray mb-6">
+                  {plan.description}
+                </p>
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-start space-x-3">
@@ -88,13 +103,16 @@ const PricingSection: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <Button 
+
+                <Button
                   className={`w-full ${
-                    plan.isPopular 
-                      ? "bg-consultancy-blue hover:bg-consultancy-blue/80" 
+                    plan.isPopular
+                      ? "bg-consultancy-blue hover:bg-consultancy-blue/80"
                       : "bg-white/10 hover:bg-white/20"
                   } transition-colors`}
+                  onClick={() =>
+                    window.open("https://wa.me/+919566412970", "_blank")
+                  }
                 >
                   {plan.price === "Custom" ? "Contact Us" : "Get Started"}
                 </Button>
@@ -105,7 +123,15 @@ const PricingSection: React.FC = () => {
 
         <div className="mt-12 text-center">
           <p className="text-consultancy-lightgray">
-            Need a custom solution? <a href="#contact" className="text-consultancy-blue underline">Contact us</a> for a personalized quote.
+            Need a custom solution?{" "}
+            <a
+              href="https://wa.me/+919566412970"
+              target="_blank"
+              className="text-consultancy-blue underline"
+            >
+              Contact us
+            </a>{" "}
+            for a personalized quote.
           </p>
         </div>
       </div>
