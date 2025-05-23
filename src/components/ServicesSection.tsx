@@ -15,12 +15,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const ServicesSection: React.FC = () => {
   const services = [
     {
-      title: "Video Creation",
-      description:
-        "Engaging video content production to boost your brand's visibility and connect with your audience.",
-      icon: Video,
-    },
-    {
       title: "Digital Marketing",
       description:
         "Innovative tactics to scale your business rapidly and sustainably in the competitive digital markets.",
@@ -43,6 +37,12 @@ const ServicesSection: React.FC = () => {
       description:
         "User-friendly mobile applications to expand your reach and engage customers on the go.",
       icon: Smartphone,
+    },
+    {
+      title: "Video Creation",
+      description:
+        "Engaging video content production to boost your brand's visibility and connect with your audience.",
+      icon: Video,
     },
     {
       title: "Brand Development",

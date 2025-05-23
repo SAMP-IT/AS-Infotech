@@ -18,25 +18,15 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
-                className="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-consultancy-blue/20 transition-colors"
-              >
-                <Facebook className="h-4 w-4 text-consultancy-lightgray" />
-              </a>
-              <a
-                href="#"
-                className="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-consultancy-blue/20 transition-colors"
-              >
-                <Twitter className="h-4 w-4 text-consultancy-lightgray" />
-              </a>
-              <a
-                href="#"
+                href="https://www.linkedin.com/in/aadhi-sakthi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank"
                 className="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-consultancy-blue/20 transition-colors"
               >
                 <Linkedin className="h-4 w-4 text-consultancy-lightgray" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/as_.infotech?utm_source=qr&igsh=NTd2bG12cnY1bHQ4"
+                target="_blank"
                 className="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-consultancy-blue/20 transition-colors"
               >
                 <Instagram className="h-4 w-4 text-consultancy-lightgray" />
