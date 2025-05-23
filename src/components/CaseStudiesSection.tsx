@@ -6,7 +6,7 @@ const testimonials = [
   {
     name: "Amgok",
     position: "Clothing Brand",
-    image: "/placeholder.svg",
+    image: "/clientAmgok.webp",
     quote:
       "AS Infotech transformed our business strategy. Their expertise helped us increase our market reach by 40% in just 6 months.",
     stars: 5,
@@ -14,15 +14,15 @@ const testimonials = [
   {
     name: "KleanklubCbe",
     position: "Sindhu S, Founder",
-    image: "/placeholder.svg",
+    image: "/clientKlean.png",
     quote:
       "The team provided actionable insights that completely changed how we approach customer acquisition. Our conversion rates are up by 45%.",
     stars: 5,
   },
   {
-    name: "Sri Rudra Cars",
-    position: "Self Driving Rental Cars",
-    image: "/placeholder.svg",
+    name: "Balaji Eco Homes",
+    position: "Building Dream Houses",
+    image: "/clientBalaji.jpg",
     quote:
       "Working with AS Infotech was game-changing for our business. Their strategic guidance helped us navigate a difficult market transition seamlessly.",
     stars: 5,
