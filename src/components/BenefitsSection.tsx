@@ -43,10 +43,10 @@ const BenefitsSection: React.FC = () => {
 
   // Carousel images
   const carouselImages = [
-    "/kleanklub.png",
-    "/amgok.png",
-    "/balaji.png",
-    "/SriRudra.png",
+    "/KleanKlubImg.png",
+    "/AmgokDress.png",
+    "/BalajiHome.png",
+    "/SRCars.png",
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -128,12 +128,12 @@ const BenefitsSection: React.FC = () => {
 
         {/* Image Carousel */}
         <div className="mt-12 flex justify-center">
-          <div className="bg-consultancy-darkgray rounded-2xl shadow-2xl p-4 flex items-center justify-center w-[1000px] h-[380px]">
+          <div className="bg-consultancy-darkgray rounded-2xl shadow-2xl p-4 flex items-center justify-center w-[750px] h-[600px]">
             <img
               src={carouselImages[currentIndex]}
               alt="Trusted Brand"
               className="object-contain h-full w-full transition-all duration-700 rounded-xl shadow-lg"
-              style={{ maxHeight: "350px", maxWidth: "960px" }}
+              style={{ maxHeight: "565px", maxWidth: "745px" }}
             />
           </div>
         </div>

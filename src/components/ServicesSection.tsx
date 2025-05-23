@@ -15,16 +15,34 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const ServicesSection: React.FC = () => {
   const services = [
     {
-      title: "Business Strategy",
+      title: "Video Creation",
       description:
-        "Develop comprehensive business strategies tailored to your unique goals and market position.",
-      icon: Lightbulb,
+        "Engaging video content production to boost your brand's visibility and connect with your audience.",
+      icon: Video,
     },
     {
-      title: "Growth Hacking",
+      title: "Digital Marketing",
       description:
-        "Innovative tactics to scale your business rapidly and sustainably in competitive markets.",
+        "Innovative tactics to scale your business rapidly and sustainably in the competitive digital markets.",
       icon: TrendingUp,
+    },
+    {
+      title: "Website Development",
+      description:
+        "Custom, responsive websites designed to elevate your online presence and drive business growth.",
+      icon: Globe,
+    },
+    {
+      title: "Software Development",
+      description:
+        "Robust software solutions tailored to streamline your business operations and enhance productivity.",
+      icon: Terminal,
+    },
+    {
+      title: "Mobile App Development",
+      description:
+        "User-friendly mobile applications to expand your reach and engage customers on the go.",
+      icon: Smartphone,
     },
     {
       title: "Brand Development",
@@ -45,28 +63,10 @@ const ServicesSection: React.FC = () => {
       icon: LineChart,
     },
     {
-      title: "Video Creation",
+      title: "Business Strategy",
       description:
-        "Engaging video content production to boost your brand's visibility and connect with your audience.",
-      icon: Video,
-    },
-    {
-      title: "Website Development",
-      description:
-        "Custom, responsive websites designed to elevate your online presence and drive business growth.",
-      icon: Globe,
-    },
-    {
-      title: "Software Development",
-      description:
-        "Robust software solutions tailored to streamline your business operations and enhance productivity.",
-      icon: Terminal,
-    },
-    {
-      title: "Mobile App Development",
-      description:
-        "User-friendly mobile applications to expand your reach and engage customers on the go.",
-      icon: Smartphone,
+        "Develop comprehensive business strategies tailored to your unique goals and market position.",
+      icon: Lightbulb,
     },
   ];
 

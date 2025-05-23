@@ -3,11 +3,9 @@ import { CheckCircle } from "lucide-react";
 
 const AboutSection: React.FC = () => {
   const credentials = [
-    "MBA, Harvard Business School",
     "Certified Business Consultant",
-    "Former Strategy Director at Fortune 500 Company",
     "Published Author on Business Growth",
-    "5+ Years in Executive Advisory Roles",
+    "5+ Years in Digital Marketing and Software Development",
   ];
 
   const features = [
@@ -71,9 +69,9 @@ const AboutSection: React.FC = () => {
             <div className="glass-card p-8 border-0">
               <div className="mx-auto mb-6 h-24 w-24 rounded-full overflow-hidden bg-white/10 flex items-center justify-center">
                 <img
-                  src="/placeholder.svg"
-                  alt="Consultant"
-                  className="object-cover h-full w-full"
+                  src="/Logo.png"
+                  alt="AS Infotech Logo"
+                  className="object-cover h-full w-full rounded-full scale-110"
                 />
               </div>
 
@@ -103,10 +101,10 @@ const AboutSection: React.FC = () => {
               <div className="mt-8 pt-6 border-t border-white/10">
                 <p className="text-center">
                   <span className="text-consultancy-lightgray">
-                    Featured in:{" "}
+                    Currently Managing:{" "}
                   </span>
                   <span className="text-white font-semibold">
-                    Forbes, Business Insider, Entrepreneur
+                    AS Infotech Solutions
                   </span>
                 </p>
               </div>

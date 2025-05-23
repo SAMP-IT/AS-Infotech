@@ -39,8 +39,14 @@ const Navbar: React.FC = () => {
     >
       <div className="container mx-auto flex justify-between items-center px-4">
         <div className="flex items-center">
-          <a href="#" className="text-2xl font-bold text-white">
-            AS Infotech
+          <a href="#" className="flex items-center">
+            <span className="h-12 w-12 rounded-full overflow-hidden flex items-center justify-center bg-white/10">
+              <img
+                src="/Logo.png"
+                alt="AS Infotech Logo"
+                className="h-full w-full object-cover rounded-full scale-110"
+              />
+            </span>
           </a>
         </div>
 

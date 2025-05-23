@@ -14,11 +14,20 @@ const HeroSection: React.FC = () => {
 
       <div className="container mx-auto px-4 z-10 py-24">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gradient animate-fade-in-up">
-            Get the best Digital Marketing Services at affortable Cost
+          <div className="flex justify-center mb-6">
+            <span className="h-36 w-36 rounded-full overflow-hidden flex items-center justify-center bg-white/10">
+              <img
+                src="/Logo.png"
+                alt="AS Infotech Logo"
+                className="h-full w-full object-cover rounded-full scale-110"
+              />
+            </span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gradient animate-fade-in-up">
+            Get the best Digital Marketing and Software Development Services
           </h1>
           <p
-            className="text-xl md:text-2xl text-consultancy-lightgray mb-8 animate-fade-in-up"
+            className="text-xl md:text-xl text-consultancy-lightgray mb-8 animate-fade-in-up"
             style={{ animationDelay: "0.2s" }}
           >
             Customer's satisfaction is our priority. That's why we say "We
