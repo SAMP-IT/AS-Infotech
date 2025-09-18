@@ -6,13 +6,13 @@ const HeroSection: React.FC = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center bg-hero-gradient relative overflow-hidden"
+      className="relative overflow-hidden bg-hero-gradient pt-24 pb-16 md:pt-0 md:pb-0 md:min-h-screen md:flex md:items-center md:justify-center"
     >
       {/* Decorative Elements */}
       <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-consultancy-blue/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-consultancy-blue/10 rounded-full blur-3xl"></div>
 
-      <div className="container mx-auto px-4 z-10 py-24">
+      <div className="container mx-auto px-4 z-10 md:py-24">
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex justify-center mb-6">
             <span className="h-36 w-36 rounded-full overflow-hidden flex items-center justify-center bg-white/10">
@@ -61,8 +61,8 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Glass Card */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 w-full max-w-5xl">
-        <div className="glass-card mx-4 p-6 animate-float">
+      <div className="w-full px-4 mt-12 md:mt-0 md:absolute md:bottom-12 md:left-1/2 md:w-full md:max-w-5xl md:-translate-x-1/2 md:transform">
+        <div className="glass-card mx-auto max-w-5xl p-6 md:animate-float">
           <div className="flex flex-wrap justify-center gap-8 md:gap-16 text-center">
             <div>
               <p className="text-3xl font-bold text-consultancy-blue">5+</p>
